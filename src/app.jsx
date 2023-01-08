@@ -115,8 +115,6 @@ function App() {
                     <p>Best Time - {("0" + Math.floor(state.best_time/60000)).slice(-2)} : {("0" + Math.floor(state.best_time/1000)).slice(-2)} : {("00" + state.best_time%1000).slice(-3)}</p>
                 </div>
             }
-            
-
         </div>
     )
 }
