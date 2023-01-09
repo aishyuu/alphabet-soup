@@ -2,6 +2,8 @@
 
 How well do you know your keyboard?
 
+[Play Here](https://aishyuu.github.io/alphabet-soup/)
+
 ## Rules
 
 The only rule: Type a-z as fast as possible!
