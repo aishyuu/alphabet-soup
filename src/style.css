@@ -2,7 +2,7 @@
     color: red;
 }
 
-.times_table {
+.times-table {
     height: 250px;
     overflow-y: auto;
     width: 500px;
@@ -24,4 +24,19 @@ body {
 
 .intro-text {
     margin-top: 250px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+.new-record {
+    color: rgb(115, 83, 186)
+}
+
+.source-link {
+    color: rgb(80, 128, 142)
 }

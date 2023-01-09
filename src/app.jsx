@@ -16,6 +16,7 @@ function App() {
         current_index: 0,
         best_time: localStorage.getItem('best_time'),
         started: false,
+        new_record: false
     })
 
     const [times, setTimes] = React.useState([])
@@ -53,7 +54,8 @@ function App() {
                 setState({
                     ...state,
                     completed: true,
-                    best_time: elapsedTime
+                    best_time: elapsedTime,
+                    new_record: true
                 })
             } else {
                 setState({
@@ -83,14 +85,15 @@ function App() {
             ...state,
             current_index: 0,
             completed: false,
-            started: false
+            started: false,
+            new_record: false
         })
     }
     
     return(
             <div className="app">
             {state.started ? 
-                <div className="times_table">
+                <div className="times-table">
                     <table>
                         {times.map(function(timing) {
                             return(
@@ -110,7 +113,7 @@ function App() {
                 </div>
             }
             
-            <div className="game_information">
+            <div className="game-information">
                 {state.completed ? 
                     <h1>Completed</h1>
                     : 
@@ -124,6 +127,12 @@ function App() {
             
             {state.completed ?
                 <div>
+                    {state.new_record ? 
+                    <p className="new-record">New Record!</p>
+                    :
+                    <div></div>
+                    }
+                    
                     <button className="btn btn-secondary" onClick={stop}>Restart</button>
                 </div>
                 :
